@@ -19,8 +19,8 @@ const messages = [
   
   const funnyCommit = () => {
     const message = messages[Math.floor(Math.random() * messages.length)];
-    console.log(`
-        <${message}>
+    const messageBorder = "|-" + "-".repeat(message.length) + "-|\n" + `| ${message} |\n` + "|_" + "_".repeat(message.length) + "_|\n"
+    console.log(`${messageBorder}
              /
             /
         /\\_/\\
@@ -30,7 +30,7 @@ const messages = [
           ||  
     `);
   }
-
+  
   module.exports = {
     funnyCommit
   };
